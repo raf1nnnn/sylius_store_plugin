@@ -1,6 +1,6 @@
 ## Installation
 
-1. Run `composer require dotitteam/sylius-vendor-plugin --no-scripts`
+1. Run `composer require dotit/sylius-store-plugin --no-scripts`
 
 2. Enable the plugin in bundles.php
 
@@ -46,7 +46,7 @@ dotit_sylius_store_plugin_shop:
 
 
 
-7. Create logo folder: run `mkdir public/media/vendor-logo -p` and insert a .gitkeep file in that folder
+7. Create logo folder: run `mkdir public/media/store-logo -p` and insert a .gitkeep file in that folder
 
 8. Finish the installation updating the database schema and installing assets
 
