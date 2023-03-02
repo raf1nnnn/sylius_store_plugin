@@ -68,7 +68,7 @@ interface StoreInterface extends
     public function getTranslation(?string $locale = null): TranslationInterface;
 
     public function getPhoneNumber():int;
-    public function getAddress():string;
+    public function getAddress():?string;
     public function setPhoneNumber(int $phoneNumber): void;
     public function setAddress(string $address): void;
 }

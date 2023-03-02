@@ -1,6 +1,6 @@
 services:
   dotit_sylius_store_plugin.controller.store_slug:
-    class: Odiseo\SyliusVendorPlugin\Controller\StoreController
+    class: Dotit\SyliusStorePlugin\Controller\StoreSlugController
     public: true
     arguments:
       - '@sylius.generator.slug'

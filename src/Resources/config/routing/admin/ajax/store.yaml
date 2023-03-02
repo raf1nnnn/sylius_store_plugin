@@ -2,5 +2,5 @@ dotit_sylius_store_plugin_admin_ajax_store_generate_slug:
   path: /generate-slug
   methods: [GET]
   defaults:
-    _controller: dotit_sylius_store_plugin.controller.store_slug:generate
+    _controller: dotit_sylius_store_plugin.controller.store_slug::generate
     _format: json

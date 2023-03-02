@@ -217,7 +217,7 @@ class Store implements StoreInterface
         return new StoreTranslation();
     }
 
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->address;
     }
@@ -232,12 +232,12 @@ class Store implements StoreInterface
         return $this->phoneNumber;
     }
 
-    public function setPhoneNumber(int $phoneNumber): void
+    public function setPhoneNumber(?int $phoneNumber): void
     {
         $this->phoneNumber = $phoneNumber;
     }
 
-    public function setAddress(string $address): void
+    public function setAddress(?string $address): void
     {
         $this->address = $address;
     }
@@ -252,12 +252,12 @@ class Store implements StoreInterface
         return $this->longitude;
     }
 
-    public function setLatitude(string $latitude): void
+    public function setLatitude(?string $latitude): void
     {
         $this->latitude = $latitude;
     }
 
-    public function setLongitude(string $longitude): void
+    public function setLongitude(?string $longitude): void
     {
         $this->longitude = $longitude;
     }

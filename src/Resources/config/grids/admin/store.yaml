@@ -65,6 +65,9 @@ sylius_grid:
                 enabled:
                     type: boolean
                     label: sylius.ui.enabled
+                picking:
+                    type: boolean
+                    label: Picking
                 createdAt:
                     type: date
                     label: sylius.ui.creation_date
