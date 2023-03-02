@@ -1,0 +1,115 @@
+sylius_ui:
+    events:
+        dotit_sylius_store_plugin.shop.store.product.index.before_vertical_menu:
+            blocks:
+                legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.before_vertical_menu
+
+        dotit_sylius_store_plugin.shop.store.product.index.after_vertical_menu:
+            blocks:
+                legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.after_vertical_menu
+
+        dotit_sylius_store_plugin.shop.store.product.index.before_list:
+            blocks:
+                legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.before_list
+
+        dotit_sylius_store_plugin.shop.store.product.index.before_pagination:
+            blocks:
+                legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.before_pagination
+
+        dotit_sylius_store_plugin.shop.store.product.index.search:
+            blocks:
+                before_search_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 35
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.before_search
+                search:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Product/Index/_search.html.twig"
+                    priority: 30
+                after_search_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 25
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.product.index.after_search
+                pagination:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Product/Index/_pagination.html.twig"
+                    priority: 20
+                sorting:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Product/Index/_sorting.html.twig"
+                    priority: 10
+
+        dotit_sylius_store_plugin.shop.store.index.header:
+            blocks:
+                breadcrumb:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Header/_breadcrumb.html.twig"
+                    priority: 20
+                before_header_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 15
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.header.before
+                header:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Header/_content.html.twig"
+                    priority: 10
+                after_header_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 5
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.header.after
+
+        dotit_sylius_store_plugin.shop.store.index.before_pagination:
+            blocks:
+                legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.before_pagination
+
+        dotit_sylius_store_plugin.shop.store.index.search:
+            blocks:
+                before_search_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 35
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.before_search
+                search:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Index/_search.html.twig"
+                    priority: 30
+                after_search_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 25
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.after_search
+                pagination:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Index/_pagination.html.twig"
+                    priority: 20
+                sorting:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Index/_sorting.html.twig"
+                    priority: 10
+
+        dotit_sylius_store_plugin.shop.store.index.list:
+            blocks:
+                before_list_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 25
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.before_list
+                list:
+                    template: "@DotitSyliusStorePlugin/Shop/store/Index/_list.html.twig"
+                    priority: 20
+                after_list_legacy:
+                    template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
+                    priority: 15
+                    context:
+                        event: dotit_sylius_store_plugin.shop.store.index.after_list

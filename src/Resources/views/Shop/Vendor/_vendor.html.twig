@@ -1,0 +1,10 @@
+<div class="column" {{ sylius_test_html_attribute('store') }}>
+    <a href="{{ path('dotit_sylius_store_plugin_shop_store_product_index', {'slug': store.slug} ) }}" class="ui fluid card">
+        <div class="image">
+            <img src="{{ store.logoName|imagine_filter('dotit_sylius_store_plugin_logo') }}" alt="{{ store.name }}">
+        </div>
+        <div class="content">
+            <div class="description">{{ store.name }}</div>
+        </div>
+    </a>
+</div>

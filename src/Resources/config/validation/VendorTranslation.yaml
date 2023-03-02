@@ -1,0 +1,6 @@
+Dotit\SyliusStorePlugin\Entity\StoreTranslation:
+    properties:
+        description:
+            - NotBlank:
+                message: 'dotit_sylius_store_plugin.store_translation.description.not_blank'
+                groups: ['dotit']

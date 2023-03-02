@@ -1,0 +1,46 @@
+dotit_sylius_store_plugin:
+    store:
+        slug:
+            unique: There is an existing store with this slug.
+            not_blank: Slug cannot be blank.
+            min_length: Slug must be at least {{ limit }} characters long.
+            max_length: Slug can not be longer than {{ limit }} characters.
+        name:
+            unique: There is an existing store with this name.
+            not_blank: Name cannot be blank.
+            min_length: Name must be at least {{ limit }} characters long.
+            max_length: Name can not be longer than {{ limit }} characters.
+
+        address:
+            unique: There is an existing store with this address.
+            not_blank: Address cannot be blank.
+            min_length: Address must be at least {{ limit }} characters long.
+            max_length: Address can not be longer than {{ limit }} characters.
+
+        longitude:
+            not_blank: Longitude cannot be blank.
+            min_length: Longitude must be at least {{ limit }} characters long.
+            max_length: Longitude can not be longer than {{ limit }} characters.
+        latitude:
+            not_blank: Latitude cannot be blank.
+            min_length: Latitude must be at least {{ limit }} characters long.
+            max_length: Latitude can not be longer than {{ limit }} characters.
+        phoneNumber:
+            unique: There is an existing store with this phone number.
+            not_blank: Phone number cannot be blank.
+            min_length: Phone number must be at least {{ limit }} characters long.
+            max_length: Phone number can not be longer than {{ limit }} characters.
+        email:
+            invalid: This email is invalid.
+            unique: This email is already used.
+            not_blank: Email cannot be blank.
+            min_length: Email must be at least {{ limit }} characters long.
+            max_length: Email can not be longer than {{ limit }} characters.
+        logo_file:
+            not_blank: Logo cannot be blank.
+    store_translation:
+        description:
+            not_blank: Description cannot be blank.
+    product:
+        store:
+            not_blank: Please select a store.

@@ -1,0 +1,4 @@
+{{ render(url('dotit_sylius_store_plugin_shop_partial_store_show_by_slug', {
+    'slug': app.request.attributes.get('slug'),
+    'template': '@DotitSyliusStorePlugin/Shop/store/_verticalMenu.html.twig'
+})) }}

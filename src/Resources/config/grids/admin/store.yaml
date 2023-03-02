@@ -1,0 +1,80 @@
+sylius_grid:
+    grids:
+        dotit_sylius_store_plugin_admin_store:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%dotit_sylius_store_plugin.model.store.class%"
+            sorting:
+                createdAt: asc
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+                address:
+                    type: string
+                    label: sylius.ui.address
+                    sortable: ~
+                phoneNumber:
+                    type: string
+                    label: Phone Number
+                    sortable: ~
+                email:
+                    type: string
+                    label: sylius.ui.email
+                    sortable: ~
+                longitude:
+                    type: string
+                    label: Longitude
+                latitude:
+                    type: string
+                    label: Latitude
+                    sortable: ~
+                logo:
+                    type: twig
+                    label: sylius.ui.image
+                    path: logoName
+                    options:
+                        template: "@DotitSyliusStorePlugin/Field/_image.html.twig"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/Grid/Field/enabled.html.twig"
+                picking:
+                    type: twig
+                    label: Picking
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/Grid/Field/enabled.html.twig"
+                createdAt:
+                    type: datetime
+                    label: sylius.ui.creation_date
+                    sortable: ~
+                    options:
+                        format: d-m-Y H:i
+            filters:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                email:
+                    type: string
+                    label: sylius.ui.email
+                enabled:
+                    type: boolean
+                    label: sylius.ui.enabled
+                createdAt:
+                    type: date
+                    label: sylius.ui.creation_date
+            actions:
+                main:
+                    create:
+                        type: create
+
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

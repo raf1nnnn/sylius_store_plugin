@@ -1,0 +1,9 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ 'dotit_sylius_store_plugin.ui.stores'|trans }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+    {{ sylius_template_event('dotit_sylius_store_plugin.shop.store.index.header', _context) }}
+
+    {{ sylius_template_event('dotit_sylius_store_plugin.shop.store.index.list', _context) }}
+{% endblock %}

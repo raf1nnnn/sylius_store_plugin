@@ -1,0 +1,13 @@
+services:
+  dotit_sylius_store_plugin.filesystem.store_logo:
+    class: Gaufrette\Filesystem
+    arguments:
+      - 'store_logo'
+    factory:
+      - '@knp_gaufrette.filesystem_map'
+      - 'get'
+
+  dotit_sylius_store_plugin.uploader.store_logo:
+    class: Dotit\SyliusStorePlugin\Uploader\StoreLogoUploader
+    arguments:
+      - '@dotit_sylius_store_plugin.filesystem.store_logo'

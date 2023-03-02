@@ -1,0 +1,15 @@
+{{ sylius_template_event('dotit_sylius_store_plugin.shop.store.product.index.before_vertical_menu', {'store': store}) }}
+
+<img class="ui medium circular image" src="{{ store.logoName|imagine_filter('dotit_sylius_store_plugin_logo') }}" alt="{{ store.name }}">
+<div class="ui hidden divider"></div>
+
+{{ sylius_template_event('dotit_sylius_store_plugin.shop.store.product.index.after_logo', {'store': store}) }}
+
+<h1 class="ui header">
+    <span {{ sylius_test_html_attribute('store-name') }}>{{ store.name }}</span>
+    <div class="sub header">
+        {{ store.description }}
+    </div>
+</h1>
+
+{{ sylius_template_event('dotit_sylius_store_plugin.shop.store.product.index.after_vertical_menu', {'store': store}) }}

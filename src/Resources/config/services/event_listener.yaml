@@ -1,0 +1,26 @@
+services:
+  dotit_sylius_store_plugin.event_listener.admin.menu_builder:
+    class: Dotit\SyliusStorePlugin\Menu\AdminMenuListener
+    tags:
+      - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+  dotit_sylius_store_plugin.menu_builder.admin.store_form:
+    class: Dotit\SyliusStorePlugin\Menu\StoreFormMenuBuilder
+    arguments:
+      - '@knp_menu.factory'
+      - '@event_dispatcher'
+    tags:
+      - { name: knp_menu.menu_builder, method: createMenu, alias: dotit_sylius_store_plugin.admin.store_form }
+
+  dotit_sylius_store_plugin.event_listener.store_logo_upload:
+    class: Dotit\SyliusStorePlugin\EventListener\StoreLogoUploadListener
+    arguments:
+      - '@dotit_sylius_store_plugin.uploader.store_logo'
+    tags:
+      - { name: kernel.event_listener, event: dotit_sylius_store_plugin.store.pre_create, method: uploadLogo }
+      - { name: kernel.event_listener, event: dotit_sylius_store_plugin.store.pre_update, method: uploadLogo }
+
+  dotit_sylius_store_plugin.block_event_listener.layout.store.javascripts:
+    class: Dotit\SyliusStorePlugin\Block\StoreJsBlockListener
+    tags:
+      - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }

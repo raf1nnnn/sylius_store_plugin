@@ -1,0 +1,10 @@
+services:
+    dotit_sylius_store_plugin.page.shop.vendor.index_page:
+        class: Tests\Dotit\SyliusStorePlugin\Behat\Page\Shop\Vendor\IndexPage
+        parent: sylius.behat.symfony_page
+        public: false
+
+    dotit_sylius_store_plugin.page.shop.vendor.show_page:
+        class: Tests\Dotit\SyliusStorePlugin\Behat\Page\Shop\Vendor\ShowPage
+        parent: sylius.behat.symfony_page
+        public: false

@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Dotit\SyliusStorePlugin
+        psr4_prefix: Dotit\SyliusStorePlugin

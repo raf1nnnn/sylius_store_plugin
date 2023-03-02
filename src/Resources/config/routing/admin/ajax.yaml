@@ -1,0 +1,3 @@
+store_sylius_store_plugin_admin_ajax_store:
+  resource: ajax/store.yaml
+  prefix: /stores

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dotit\SyliusStorePlugin\Entity\StoreTranslation">
+        <attribute name="id">
+            <group>admin:store:read</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="locale">
+            <group>admin:store:create</group>
+        </attribute>
+        <attribute name="description">
+            <group>admin:store:create</group>
+            <group>shop:store:read</group>
+        </attribute>
+    </class>
+</serializer>

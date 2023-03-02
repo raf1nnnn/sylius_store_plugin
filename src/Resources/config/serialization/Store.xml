@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dotit\SyliusStorePlugin\Entity\Store">
+        <attribute name="id">
+            <group>admin:store:read</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="slug">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="address">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="phoneNumber">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+            <group>shop:store:create</group>
+        </attribute>
+        <attribute name="longitude">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+            <group>shop:store:create</group>
+        </attribute>
+        <attribute name="latitude">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+            <group>shop:store:create</group>
+        </attribute>
+        <attribute name="logoName">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="logoPath">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+
+        <attribute name="enabled">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="picking">
+            <group>admin:store:create</group>
+            <group>admin:store:read</group>
+            <group>admin:store:update</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>admin:store:read</group>
+            <group>shop:store:read</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>admin:store:read</group>
+            <group>shop:store:read</group>
+        </attribute>
+    </class>
+</serializer>

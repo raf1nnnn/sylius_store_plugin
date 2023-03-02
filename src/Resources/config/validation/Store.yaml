@@ -1,0 +1,95 @@
+Dotit\SyliusStorePlugin\Entity\Store:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [name]
+            message: 'dotit_sylius_store_plugin.store.name.unique'
+            groups: ['dotit']
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [slug]
+            message: 'dotit_sylius_store_plugin.store.slug.unique'
+            groups: ['dotit']
+
+    properties:
+        name:
+            - NotBlank:
+                message: 'dotit_sylius_store_plugin.store.name.not_blank'
+                groups: ['dotit']
+            - Length:
+                min: 2
+                max: 250
+                minMessage: 'dotit_sylius_store_plugin.store.name.min_length'
+                maxMessage: 'dotit_sylius_store_plugin.store.name.max_length'
+                groups: ['dotit']
+        address:
+              - NotBlank:
+                    message: 'dotit_sylius_store_plugin.store.address.not_blank'
+                    groups: [ 'dotit' ]
+              - Length:
+                    min: 2
+                    max: 250
+                    minMessage: 'dotit_sylius_store_plugin.store.address.min_length'
+                    maxMessage: 'dotit_sylius_store_plugin.store.address.max_length'
+                    groups: [ 'dotit' ]
+        longitude:
+              - NotBlank:
+                    message: 'dotit_sylius_store_plugin.store.longitude.not_blank'
+                    groups: [ 'dotit' ]
+              - Length:
+                    min: 2
+                    max: 250
+                    minMessage: 'dotit_sylius_store_plugin.store.longitude.min_length'
+                    maxMessage: 'dotit_sylius_store_plugin.store.longitude.max_length'
+                    groups: [ 'dotit' ]
+        latitude:
+             - NotBlank:
+                   message: 'dotit_sylius_store_plugin.store.longitude.not_blank'
+                   groups: [ 'dotit' ]
+             - Length:
+                     min: 2
+                     max: 250
+                     minMessage: 'dotit_sylius_store_plugin.store.longitude.min_length'
+                     maxMessage: 'dotit_sylius_store_plugin.store.longitude.max_length'
+                     groups: [ 'dotit' ]
+        phoneNumber:
+            - NotBlank:
+                  message: 'dotit_sylius_store_plugin.store.phoneNumber.not_blank'
+                  groups: [ 'dotit' ]
+            - Length:
+                  min: 8
+                  max: 9
+                  minMessage: 'dotit_sylius_store_plugin.store.phoneNumber.min_length'
+                  maxMessage: 'dotit_sylius_store_plugin.store.phoneNumber.max_length'
+                  groups: [ 'dotit' ]
+
+
+        slug:
+            - NotBlank:
+                message: 'dotit_sylius_store_plugin.store.slug.not_blank'
+                groups: ['dotit']
+            - Length:
+                min: 2
+                max: 250
+                minMessage: 'dotit_sylius_store_plugin.store.slug.min_length'
+                maxMessage: 'dotit_sylius_store_plugin.store.slug.max_length'
+                groups: ['dotit']
+        email:
+            - NotBlank:
+                message: 'dotit_sylius_store_plugin.store.email.not_blank'
+                groups: ['dotit']
+            - Length:
+                min: 2
+                max: 250
+                minMessage: 'dotit_sylius_store_plugin.store.email.min_length'
+                maxMessage: 'dotit_sylius_store_plugin.store.email.max_length'
+                groups: ['dotit']
+            - Email:
+                message: 'dotit_sylius_store_plugin.store.email.invalid'
+                mode: strict
+                groups: ['dotit']
+        logoFile:
+            - NotBlank:
+                message: 'dotit_sylius_store_plugin.store.logo_file.not_blank'
+                groups: ['dotit_logo_create']
+        translations:
+            - Valid: ~
+

@@ -1,0 +1,19 @@
+sylius_resource:
+    resources:
+        dotit_sylius_store_plugin.store:
+            driver: doctrine/orm
+            classes:
+                model: Dotit\SyliusStorePlugin\Entity\Store
+                interface: Dotit\SyliusStorePlugin\Entity\StoreInterface
+                form: Dotit\SyliusStorePlugin\Form\Type\StoreType
+                repository: Dotit\SyliusStorePlugin\Repository\StoreRepository
+                controller: Dotit\SyliusStorePlugin\Controller\StoreController
+                factory: Sylius\Component\Resource\Factory\Factory
+            translation:
+                classes:
+                    model: Dotit\SyliusStorePlugin\Entity\StoreTranslation
+                    interface: Dotit\SyliusStorePlugin\Entity\StoreTranslationInterface
+                    form: Dotit\SyliusStorePlugin\Form\Type\StoreTranslationType
+                    repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                    factory: Sylius\Component\Resource\Factory\Factory

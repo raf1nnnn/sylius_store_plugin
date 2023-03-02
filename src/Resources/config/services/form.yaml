@@ -1,0 +1,13 @@
+services:
+
+  dotit_sylius_store_plugin.form.type.store:
+    class: Dotit\SyliusStorePlugin\Form\Type\StoreType
+    arguments:
+      - '%dotit_sylius_store_plugin.model.store.class%'
+      - ['dotit']
+    tags:
+      - { name: form.type, alias: odiseo_sylius_vendor }
+
+
+
+

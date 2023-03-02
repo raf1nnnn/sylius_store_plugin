@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+
+<resources xmlns="https://api-platform.com/schema/metadata"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
+>
+    <resource class="%dotit_sylius_store_plugin.model.store.class%" shortName="store">
+        <attribute name="validation_groups">dotit</attribute>
+
+        <collectionOperations>
+            <collectionOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/stores</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:store:read</attribute>
+                </attribute>
+            </collectionOperation>
+
+            <collectionOperation name="admin_post">
+                <attribute name="method">POST</attribute>
+                <attribute name="path">/admin/stores</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:store:create</attribute>
+                </attribute>
+            </collectionOperation>
+
+            <collectionOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/stores</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:store:read</attribute>
+                </attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/stores/{slug}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:store:read</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_put">
+                <attribute name="method">PUT</attribute>
+                <attribute name="path">/admin/stores/{slug}</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:store:update</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_delete">
+                <attribute name="method">DELETE</attribute>
+                <attribute name="path">/admin/stores/{slug}</attribute>
+            </itemOperation>
+
+            <itemOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/stores/{slug}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:store:read</attribute>
+                </attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <property name="id" identifier="false" writable="false"/>
+        <property name="slug" identifier="true" required="true"/>
+        <property name="name" required="true"/>
+        <property name="email" required="true"/>
+        <property name="address" required="true"/>
+        <property name="phoneNumber" required="true"/>
+        <property name="longitude" required="true"/>
+        <property name="latitude" required="true"/>
+        <property name="logoName" required="true"/>
+        <property name="logoPath" readable="true" required="true"/>
+        <property name="enabled" readable="true" writable="true"/>
+        <property name="picking" readable="true" writable="true"/>
+        <property name="translations" required="true">
+            <attribute name="openapi_context">
+                <attribute name="type">object</attribute>
+                <attribute name="example">
+                    <attribute name="en_US">
+                        <attribute name="description">string</attribute>
+                        <attribute name="locale">string</attribute>
+                    </attribute>
+                </attribute>
+            </attribute>
+        </property>
+        <property name="createdAt" writable="false"/>
+        <property name="updatedAt" writable="false"/>
+    </resource>
+</resources>

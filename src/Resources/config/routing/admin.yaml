@@ -1,0 +1,6 @@
+dotit_sylius_store_plugin_admin_store:
+  resource: admin/store.yaml
+
+dotit_sylius_store_plugin_admin_ajax:
+  resource: admin/ajax.yaml
+  prefix: /ajax

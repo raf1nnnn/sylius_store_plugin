@@ -1,0 +1,18 @@
+dotit_sylius_store_plugin_admin_vendor:
+  resource: |
+    alias: dotit_sylius_store_plugin.store
+    section: admin
+    templates: "@SyliusAdmin/Crud"
+    except: ['show']
+    redirect: index
+    grid: dotit_sylius_store_plugin_admin_store
+    permission: true
+    vars:
+        all:
+            subheader: dotit_sylius_store_plugin.ui.manage_stores
+            templates:
+                form: '@DotitSyliusStorePlugin/Admin/store/_form.html.twig'
+        index:
+            icon: trademark
+  type: sylius.resource
+

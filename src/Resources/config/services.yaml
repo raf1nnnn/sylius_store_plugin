@@ -1,0 +1,5 @@
+imports:
+    - { resource: services/controller.yaml }
+    - { resource: services/event_listener.yaml }
+    - { resource: services/form.yaml }
+    - { resource: services/uploader.yaml }

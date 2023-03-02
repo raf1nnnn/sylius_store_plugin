@@ -1,0 +1,29 @@
+<div class="ui active tab" data-tab="details">
+    <h3 class="ui top attached header">{{ 'sylius.ui.details'|trans }}</h3>
+
+    <div class="ui attached segment">
+        <div class="ui two column stackable grid">
+            <div class="column">
+                <div class="ui segment">
+                    {{ form_row(form.name) }}
+                    {% include '@DotitSyliusStorePlugin/Field/_slug.html.twig' with { 'slugField': form.slug } %}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.address) }}
+
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui segment">
+                    {{ form_row(form.phoneNumber) }}
+                    {{ form_row(form.longitude) }}
+                    {{ form_row(form.latitude) }}
+                    {{ form_row(form.enabled) }}
+                    {{ form_row(form.picking) }}
+
+                </div>
+            </div>
+        </div>
+
+        {{ sylius_template_event(['dotit_sylius_store_plugin.admin.store.' ~ action ~ '.tab_details', 'dotit_sylius_store_plugin.admin.store.tab_details'], {'form': form}) }}
+    </div>
+</div>

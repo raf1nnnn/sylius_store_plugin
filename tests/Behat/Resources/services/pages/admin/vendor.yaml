@@ -1,0 +1,21 @@
+services:
+    dotit_sylius_store_plugin.page.admin.vendor.index_page:
+        class: Tests\Dotit\SyliusStorePlugin\Behat\Page\Admin\Vendor\IndexPage
+        parent: sylius.behat.page.admin.crud.index
+        public: false
+        arguments:
+            - 'dotit_sylius_store_plugin_admin_vendor_index'
+
+    dotit_sylius_store_plugin.page.admin.vendor.create_page:
+        class: Tests\Dotit\SyliusStorePlugin\Behat\Page\Admin\Vendor\CreatePage
+        parent: sylius.behat.page.admin.crud.create
+        public: false
+        arguments:
+            - 'dotit_sylius_store_plugin_admin_vendor_create'
+
+    dotit_sylius_store_plugin.page.admin.vendor.update_page:
+        class: Tests\Dotit\SyliusStorePlugin\Behat\Page\Admin\Vendor\UpdatePage
+        parent: sylius.behat.page.admin.crud.update
+        public: false
+        arguments:
+            - 'dotit_sylius_store_plugin_admin_vendor_update'
