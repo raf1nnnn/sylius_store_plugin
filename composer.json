@@ -1,6 +1,7 @@
 {
     "name": "dotit/sylius-store-plugin",
     "type": "sylius-plugin",
+    "version": "1.0.1",
     "keywords": [
         "sylius",
         "sylius-plugin",
@@ -73,5 +74,7 @@
         "post-create-project-cmd": [
             "php bin/create_node_symlink.php"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "pref-stable": true
 }
