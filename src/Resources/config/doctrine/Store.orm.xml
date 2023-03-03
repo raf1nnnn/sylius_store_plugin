@@ -17,7 +17,7 @@
         <field name="address" type="string" unique="false"/>
         <field name="longitude" type="string" unique="false"/>
         <field name="latitude" type="string" unique="false"/>
-        <field name="phoneNumber" type="integer" unique="false"/>
+        <field name="phoneNumber" type="bigint" unique="false"/>
         <field name="logoName" type="string" column="logo_name"/>
         <field name="enabled" type="boolean"/>
         <field name="picking" type="boolean"/>

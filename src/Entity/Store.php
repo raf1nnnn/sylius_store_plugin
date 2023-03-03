@@ -232,7 +232,7 @@ class Store implements StoreInterface
         return $this->phoneNumber;
     }
 
-    public function setPhoneNumber(?int $phoneNumber): void
+    public function setPhoneNumber(int $phoneNumber): void
     {
         $this->phoneNumber = $phoneNumber;
     }
