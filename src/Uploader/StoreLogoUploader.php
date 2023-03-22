@@ -24,17 +24,16 @@ final class StoreLogoUploader implements StoreLogoUploaderInterface
         if ($store->getLogoFile() === null) {
             return;
         }
-
         /** @var File $file */
         $file = $store->getLogoFile();
 
         if (null !== $store->getLogoName() && $this->has($store->getLogoName())) {
             $this->remove($store->getLogoName());
         }
-
-        do {
-            $path = $this->name($file);
-        } while ($this->isAdBlockingProne($path) || $this->filesystem->has($path));
+//        do {
+//            $path = $this->name($file);
+//        } while ($this->isAdBlockingProne($path) || $this->filesystem->has($path));
+        $path = $this->name($file);
 
         $store->setLogoName($path);
 
@@ -72,10 +71,10 @@ final class StoreLogoUploader implements StoreLogoUploaderInterface
         $name = \str_replace('.', '', \uniqid('', true));
         $extension = $file->guessExtension();
 
+
         if (\is_string($extension) && '' !== $extension) {
             $name = \sprintf('%s.%s', $name, $extension);
         }
-
         return $name;
     }
 
