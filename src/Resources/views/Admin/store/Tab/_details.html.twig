@@ -23,6 +23,17 @@
                 </div>
             </div>
         </div>
+        <div class="ui attached segment">
+            <div class="ui one column stackable grid">
+                <div class="column">
+                    <div class="ui segment">
+                        {% block sylius_resource_autocomplete_choice_row %}
+                            {{ form_row(form.province, {'remote_url': path('dotit_sylius_store_plugin_admin_ajax_province_by_name_phrase'), 'load_edit_url': path('dotit_sylius_store_plugin_admin_ajax_province_by_name_phrase'),'remote_criteria_type':'name','remote_criteria_name':'name'}) }}
+                        {% endblock %}
+                    </div></div>
+            </div>
+
+        </div>
 
         {{ sylius_template_event(['dotit_sylius_store_plugin.admin.store.' ~ action ~ '.tab_details', 'dotit_sylius_store_plugin.admin.store.tab_details'], {'form': form}) }}
     </div>

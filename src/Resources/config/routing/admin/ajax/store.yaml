@@ -4,3 +4,18 @@ dotit_sylius_store_plugin_admin_ajax_store_generate_slug:
   defaults:
     _controller: dotit_sylius_store_plugin.controller.store_slug::generate
     _format: json
+dotit_sylius_store_plugin_admin_ajax_province_by_name_phrase:
+  path: /search-province
+  methods: [GET]
+  defaults:
+    _controller: sylius.controller.province::indexAction
+    _format: json
+    _sylius:
+      serialization_groups: [Default]
+      permission: true
+      repository:
+        method: findAll
+        arguments:
+          name: $name
+          orderBy: null
+          limit: 25

@@ -30,6 +30,9 @@
         <field name="updatedAt" type="datetime" column="updated_at">
             <gedmo:timestampable on="update"/>
         </field>
+        <many-to-one field="province" target-entity="Sylius\Component\Addressing\Model\ProvinceInterface" >
+            <join-column name="province_id" referenced-column-name="id" on-delete="CASCADE"/>
+        </many-to-one>
 
     </mapped-superclass>
 </doctrine-mapping>

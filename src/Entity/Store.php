@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Channel\Model\ChannelInterface;
 use Sylius\Component\Product\Model\ProductInterface;
+use Sylius\Component\Addressing\Model\Province;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 use Sylius\Component\Resource\Model\ToggleableTrait;
 use Sylius\Component\Resource\Model\TranslatableTrait;
@@ -36,6 +37,7 @@ class Store implements StoreInterface
     protected ?int $position = null;
     protected ?string $logoPath = null;
     protected ?bool $picking = true;
+    protected ?Province $province = null;
     /**
      * @psalm-var Collection<array-key, ChannelInterface>
      */
@@ -177,6 +179,16 @@ class Store implements StoreInterface
     public function getProducts(): Collection
     {
         return $this->products;
+    }
+
+    public function getProvince(): ?Province
+    {
+        return $this->province;
+    }
+
+    public function setProvince(?Province $proivce)
+    {
+        $this->province = $proivce;
     }
 
     public function hasProduct(ProductInterface $product): bool

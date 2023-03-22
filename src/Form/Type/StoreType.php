@@ -14,6 +14,8 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Sylius\Bundle\ResourceBundle\Form\Type\ResourceAutocompleteChoiceType;
+
 class StoreType extends AbstractResourceType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -51,6 +53,16 @@ class StoreType extends AbstractResourceType
             ->add('logoFile', FileType::class, [
                 'label' => 'dotit_sylius_store_plugin.form.store.logo',
             ])
+            ->add('province', ResourceAutocompleteChoiceType::class, [
+                'label' => 'Province',
+                'multiple' => false,
+                'required' => true,
+                'resource' => 'sylius.province',
+                'choice_value' => 'code',
+                'choice_name' => 'name',
+                'data' => $options['data']->getProvince(),
+                'data_class' => null
+            ]);
         ;
     }
     public function configureOptions(OptionsResolver $resolver): void
