@@ -33,6 +33,12 @@
             <group>admin:province:update</group>
             <group>shop:province:read</group>
         </attribute>
+        <attribute name="email">
+            <group>admin:province:create</group>
+            <group>admin:province:read</group>
+            <group>admin:province:update</group>
+            <group>shop:province:read</group>
+        </attribute>
         <attribute name="phoneNumber">
             <group>admin:province:create</group>
             <group>admin:province:read</group>
