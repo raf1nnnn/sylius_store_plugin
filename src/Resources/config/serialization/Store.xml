@@ -10,89 +10,89 @@
             <group>shop:store:read</group>
         </attribute>
         <attribute name="slug">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="province">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="name">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="address">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="email">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="phoneNumber">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="longitude">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="latitude">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="logoName">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="logoPath">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
 
         <attribute name="enabled">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="picking">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="createdAt">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
         <attribute name="updatedAt">
-            <group>admin:province:create</group>
-            <group>admin:province:read</group>
-            <group>admin:province:update</group>
-            <group>shop:province:read</group>
+            <group>admin:country:create</group>
+            <group>admin:country:read</group>
+            <group>admin:country:update</group>
+            <group>shop:country:read</group>
         </attribute>
     </class>
 </serializer>

@@ -12,7 +12,7 @@
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/stores</attribute>
                 <attribute name="normalization_context">
-                    <attribute name="groups">shop:province:read</attribute>
+                    <attribute name="groups">shop:country:read</attribute>
                 </attribute>
             </collectionOperation>
         </collectionOperations>
@@ -23,7 +23,7 @@
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/stores/{slug}</attribute>
                 <attribute name="normalization_context">
-                    <attribute name="groups">shop:province:read</attribute>
+                    <attribute name="groups">shop:country:read</attribute>
                 </attribute>
             </itemOperation>
         </itemOperations>
