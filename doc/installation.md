@@ -41,8 +41,16 @@ dotit_sylius_store_plugin_shop:
 5. Include traits and override the models
 
 ```php
-<?php
-// src/Entity/Channel/Channel.php
+6.add api filters path under config/packages/api_platform.yaml:
+api_platform:
+    mapping:
+        paths:
+            - '%kernel.project_dir%/vendor/dotit/sylius-store-plugin/src/Resources/config/api_platform'
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3]
+
 
 
 

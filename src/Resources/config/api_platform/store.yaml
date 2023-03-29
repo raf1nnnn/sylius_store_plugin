@@ -1,0 +1,5 @@
+Dotit\SyliusStorePlugin\Entity\Store:
+  operations:
+    ApiPlatform\Metadata\GetCollection:
+      filters: ['store.boolean_filter','store.province_filter']
+

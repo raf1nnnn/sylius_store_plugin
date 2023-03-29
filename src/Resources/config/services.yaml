@@ -3,3 +3,22 @@ imports:
     - { resource: services/event_listener.yaml }
     - { resource: services/form.yaml }
     - { resource: services/uploader.yaml }
+services:
+    store.boolean_filter:
+        parent: 'api_platform.doctrine.orm.boolean_filter'
+        arguments: [ { enabled: ~ } ]
+        tags: [ 'api_platform.filter' ]
+        # The following are mandatory only if a _defaults section is defined with inverted values.
+        # You may want to isolate filters in a dedicated file to avoid adding the following lines (by adding them in the defaults section)
+        autowire: false
+        autoconfigure: false
+        public: false
+    store.province_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { province.id: 'exact' } ]
+        tags: [ 'api_platform.filter' ]
+        # The following are mandatory only if a _defaults section is defined with inverted values.
+        # You may want to isolate filters in a dedicated file to avoid adding the following lines (by adding them in the defaults section)
+        autowire: false
+        autoconfigure: false
+        public: false

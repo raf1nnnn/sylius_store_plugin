@@ -6,11 +6,15 @@
 >
     <resource class="%dotit_sylius_store_plugin.model.store.class%" shortName="store">
         <attribute name="validation_groups">dotit</attribute>
-
         <collectionOperations>
             <collectionOperation name="shop_get">
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/stores</attribute>
+                <attribute>sylius.api.product_name_filter</attribute>
+                <attribute name="filters">
+                    <attribute>store.boolean_filter</attribute>
+                    <attribute>store.province_filter</attribute>
+                </attribute>
                 <attribute name="normalization_context">
                     <attribute name="groups">shop:country:read</attribute>
                 </attribute>

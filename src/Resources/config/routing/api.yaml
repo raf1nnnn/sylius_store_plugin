@@ -1,0 +1,7 @@
+get_province_stores:
+  path: shop/stores/get-stores
+  methods: ['GET']
+  defaults:
+    _controller: Dotit\SyliusStorePlugin\Controller\StoreApiController::getStores
+    _api_resource_class: Dotit\SyliusStorePlugin\Entity\Store
+    _api_item_operation_name: get_province_stores
