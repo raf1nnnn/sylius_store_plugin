@@ -58,6 +58,80 @@ api_platform:
 
 8. Finish the installation updating the database schema and installing assets
 
+9. update your order class by adding this code
+
+use Dotit\SyliusStorePlugin\Entity\StoreInterface;
+
+//
+//
+//
+//
+
+/**
+     * @var StoreInterface|null
+     *
+     * @ORM\ManyToOne(targetEntity="Dotit\SyliusStorePlugin\Entity\StoreInterface")
+     * @ORM\JoinColumn(name="store_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    private $store;
+
+    /**
+     * @return StoreInterface|null
+     */
+    public function getStore(): ?StoreInterface
+    {
+        return $this->store;
+    }
+
+    /**
+     * @param StoreInterface|null $store
+     */
+    public function setStore(?StoreInterface $store): void
+    {
+        $this->store = $store;
+    }
+```
+```xml
+* run  sudo cp -r vendor/sylius/sylius/src/Sylius/Bundle/ApiBundle/Resources/config/api_resources/  config/api_platform_random
+* add this code under order.xml :
+
+            <itemOperation name="shop_select_store">
+                <attribute name="method">PATCH</attribute>
+                <attribute name="path">/shop/orders/{tokenValue}/store/{storeId}</attribute>
+                <attribute name="messenger">input</attribute>
+                <attribute name="input">Dotit\SyliusStorePlugin\Command\Checkout\ChooseStore</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">shop:cart:select_store</attribute>
+                </attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">
+                        <attribute>shop:order:read</attribute>
+                        <attribute>shop:cart:read</attribute>
+                    </attribute>
+                </attribute>
+                <attribute name="openapi_context">
+                    <attribute name="summary">Selects store for a collect option</attribute>
+                    <attribute name="parameters">
+                        <attribute>
+                            <attribute name="name">tokenValue</attribute>
+                            <attribute name="in">path</attribute>
+                            <attribute name="required">true</attribute>
+                            <attribute name="schema">
+                                <attribute name="type">string</attribute>
+                            </attribute>
+                        </attribute>
+                        <attribute>
+                            <attribute name="name">storeId</attribute>
+                            <attribute name="in">path</attribute>
+                            <attribute name="required">true</attribute>
+                            <attribute name="schema">
+                                <attribute name="type">string</attribute>
+                            </attribute>
+                        </attribute>
+                    </attribute>
+                </attribute>
+            </itemOperation>
+
 ```
 php bin/console d:s:u -f
 
