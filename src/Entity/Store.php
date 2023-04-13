@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Channel\Model\ChannelInterface;
 use Sylius\Component\Product\Model\ProductInterface;
+use Sylius\Component\Order\Model\OrderInterface;
 use Sylius\Component\Addressing\Model\Province;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 use Sylius\Component\Resource\Model\ToggleableTrait;
@@ -39,7 +40,7 @@ class Store implements StoreInterface
     protected ?bool $picking = true;
     protected ?Province $province = null;
     /**
-     * @psalm-var Collection<array-key, ChannelInterface>
+     * @psalm-var Collection<array-key, OrderInterface>
      */
     protected Collection $channels;
 
@@ -47,6 +48,11 @@ class Store implements StoreInterface
      * @psalm-var Collection<array-key, ProductInterface>
      */
     protected Collection $products;
+
+    /**
+     * @psalm-var Collection<array-key, ProductInterface>
+     */
+    protected Collection $orders;
 
     /**
      * @psalm-var Collection<array-key, StoreEmailInterface>
@@ -57,6 +63,7 @@ class Store implements StoreInterface
         $this->initializeTranslationsCollection();
 
         $this->channels = new ArrayCollection();
+        $this->orders = new ArrayCollection();
         $this->products = new ArrayCollection();
         $this->createdAt = new \DateTime();
     }
@@ -180,6 +187,10 @@ class Store implements StoreInterface
     {
         return $this->products;
     }
+    public function getOrders(): Collection
+    {
+        return $this->orders;
+    }
 
     public function getProvince(): ?Province
     {
@@ -195,6 +206,10 @@ class Store implements StoreInterface
     {
         return $this->products->contains($product);
     }
+    public function hasOrder(OrderInterface $order): bool
+    {
+        return $this->orders->contains($order);
+    }
 
     public function addProduct(ProductInterface $product): void
     {
@@ -206,6 +221,16 @@ class Store implements StoreInterface
             }
         }
     }
+    public function addOrder(OrderInterface $order): void
+    {
+        if (!$this->hasOrder($order)) {
+            $this->orders->add($order);
+
+            if ($order instanceof StoreAwareInterface) {
+                $order->setStore($this);
+            }
+        }
+    }
 
     public function removeProduct(ProductInterface $product): void
     {
@@ -214,6 +239,16 @@ class Store implements StoreInterface
 
             if ($product instanceof StoreAwareInterface) {
                 $product->setStore(null);
+            }
+        }
+    }
+    public function removeOrder(OrderInterface $order): void
+    {
+        if ($this->hasProduct($order)) {
+            $this->orders->removeElement($order);
+
+            if ($order instanceof StoreAwareInterface) {
+                $order->setStore(null);
             }
         }
     }

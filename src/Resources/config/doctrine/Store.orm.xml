@@ -33,6 +33,13 @@
         <many-to-one field="province" target-entity="Sylius\Component\Addressing\Model\ProvinceInterface" >
             <join-column name="province_id" referenced-column-name="id" on-delete="CASCADE"/>
         </many-to-one>
+        <one-to-many field="orders" target-entity="Sylius\Component\Order\Model\OrderInterface"
+                     mapped-by="store" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+            <join-column on-delete="SET NULL"/>
 
+        </one-to-many>
     </mapped-superclass>
 </doctrine-mapping>
