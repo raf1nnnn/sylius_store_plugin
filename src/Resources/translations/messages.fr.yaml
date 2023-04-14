@@ -1,0 +1,32 @@
+dotit_sylius_store_plugin:
+  ui:
+    store: Magasin
+    stores: Magasins
+    address: Address
+    phoneNumber: Numéro téléphone
+    longitude: Longitude
+    latitude: Latitude
+    edit_store: Modifier magasin
+    new_store: Nouvelle magasin
+    profile: Profile
+    manage_stores: Gérer les magasins
+    picking: Picking
+  menu:
+    admin:
+      stores: Magasins
+  form:
+    product:
+      select_store: Sélectionnez le magasin
+    store:
+      slug: Slug
+      email: Email
+      translations: Translations
+      address: Address
+      phoneNumber: Numéro téléphone
+      description: Description
+      logo: Logo
+      channels: Channels
+      extra_emails: Extra emails
+      longitude: Longitude
+      latitude: Latitude
+      picking: Picking

@@ -18,7 +18,7 @@ sylius_grid:
                     sortable: ~
                 phoneNumber:
                     type: string
-                    label: Phone Number
+                    label: dotit_sylius_store_plugin.ui.phoneNumber
                     sortable: ~
                 email:
                     type: string
