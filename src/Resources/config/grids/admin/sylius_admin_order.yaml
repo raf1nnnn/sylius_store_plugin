@@ -1,0 +1,15 @@
+sylius_grid:
+  grids:
+    sylius_admin_order:
+      fields:
+        store:
+          type: twig
+          label: dotit_sylius_store_plugin.ui.store
+          options:
+            template: "@DotitSyliusStorePlugin/Grid/Field/store.html.twig"
+      filters:
+        store:
+          type: entity
+          label: dotit_sylius_store_plugin.ui.store
+          form_options:
+            class: "%dotit_sylius_store_plugin.model.store.class%"

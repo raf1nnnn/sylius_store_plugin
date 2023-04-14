@@ -1,3 +1,4 @@
 imports:
   - { resource: grids/admin/store.yaml }
+  - { resource: grids/admin/sylius_admin_order.yaml }
 

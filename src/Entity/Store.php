@@ -187,6 +187,7 @@ class Store implements StoreInterface
     {
         return $this->products;
     }
+
     public function getOrders(): Collection
     {
         return $this->orders;
@@ -206,6 +207,7 @@ class Store implements StoreInterface
     {
         return $this->products->contains($product);
     }
+
     public function hasOrder(OrderInterface $order): bool
     {
         return $this->orders->contains($order);
@@ -221,6 +223,7 @@ class Store implements StoreInterface
             }
         }
     }
+
     public function addOrder(OrderInterface $order): void
     {
         if (!$this->hasOrder($order)) {
@@ -242,6 +245,7 @@ class Store implements StoreInterface
             }
         }
     }
+
     public function removeOrder(OrderInterface $order): void
     {
         if ($this->hasProduct($order)) {
@@ -317,5 +321,10 @@ class Store implements StoreInterface
     public function setPicking(bool $picking): void
     {
         $this->picking = $picking;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
     }
 }

@@ -1,0 +1,6 @@
+
+{% if data is not null %}
+    <a href="{{ path('dotit_sylius_store_plugin_admin_store_update', {'id': data.id}) }}">
+        {{ data.name }}
+    </a>
+{% endif %}
