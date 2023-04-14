@@ -92,7 +92,7 @@ use Dotit\SyliusStorePlugin\Entity\StoreInterface;
     }
 ```
 ```xml
-* run  sudo cp -r vendor/sylius/sylius/src/Sylius/Bundle/ApiBundle/Resources/config/api_resources/  config/api_platform_random
+* run  sudo cp  vendor/sylius/sylius/src/Sylius/Bundle/ApiBundle/Resources/config/api_resources/Order.xml  config/api_platform/
 * add this code under order.xml :
 
             <itemOperation name="shop_select_store">
