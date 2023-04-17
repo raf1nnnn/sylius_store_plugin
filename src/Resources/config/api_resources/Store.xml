@@ -35,6 +35,7 @@
         <property name="id" identifier="false" writable="false"/>
         <property name="slug" identifier="true" required="true"/>
         <property name="name" required="true"/>
+        <property name="storeId" required="true"/>
         <property name="email" required="true"/>
         <property name="address" required="true"/>
         <property name="phoneNumber" required="true"/>

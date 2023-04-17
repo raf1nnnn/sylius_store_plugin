@@ -33,6 +33,7 @@ class Store implements StoreInterface
     protected ?string $latitude = null;
     protected ?string $longitude = null;
     protected ?int $phoneNumber = null;
+    private int $storeId;
     protected ?File $logoFile = null;
     protected ?string $logoName = null;
     protected ?int $position = null;
@@ -326,5 +327,10 @@ class Store implements StoreInterface
     public function __toString(): string
     {
         return $this->name;
+    }
+
+    public function getStoreId()
+    {
+        return $this->id;
     }
 }
