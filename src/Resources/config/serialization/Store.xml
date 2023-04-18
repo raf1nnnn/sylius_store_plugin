@@ -8,6 +8,7 @@
         <attribute name="id">
             <group>admin:store:read</group>
             <group>shop:store:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="slug">
             <group>admin:country:create</group>
@@ -15,6 +16,7 @@
             <group>admin:country:update</group>
             <group>shop:country:read</group>
             <group>shop:order:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="province">
             <group>admin:country:create</group>
@@ -28,6 +30,7 @@
             <group>admin:country:update</group>
             <group>shop:country:read</group>
             <group>shop:order:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="address">
             <group>admin:country:create</group>
@@ -35,6 +38,7 @@
             <group>admin:country:update</group>
             <group>shop:country:read</group>
             <group>shop:order:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="email">
             <group>admin:country:create</group>
@@ -42,12 +46,14 @@
             <group>admin:country:update</group>
             <group>shop:country:read</group>
             <group>shop:order:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="phoneNumber">
             <group>admin:country:create</group>
             <group>admin:country:read</group>
             <group>admin:country:update</group>
             <group>shop:country:read</group>
+            <group>shop:cart:read</group>
         </attribute>
         <attribute name="longitude">
             <group>admin:country:create</group>
@@ -103,6 +109,8 @@
             <group>admin:country:read</group>
             <group>admin:country:update</group>
             <group>shop:country:read</group>
+            <group>shop:cart:read</group>
+            <group>shop:order:read</group>
         </attribute>
     </class>
 </serializer>

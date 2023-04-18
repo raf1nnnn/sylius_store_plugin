@@ -133,6 +133,26 @@ use Dotit\SyliusStorePlugin\Entity\StoreInterface;
             </itemOperation>
 
 ```
+```xml
+create a new file under /config/serlization named Order.xml
+* add this code under order.xml :
+        <?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Sylius\Component\Core\Model\Order">
+        <attribute name="store">
+            <group>admin:order:read</group>
+            <group>shop:order:read</group>
+            <group>shop:cart:read</group>
+        </attribute>
+    </class>
+</serializer>
+
+
+```
 php bin/console d:s:u -f
 
 php bin/console sylius:theme:assets:install
